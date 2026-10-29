@@ -83,9 +83,9 @@ Verify currently available Vercel regions in the dashboard before selecting one.
 
 After Vercel assigns the production domain:
 
-- [ ] Set **Authentication → URL Configuration → Site URL** to `https://your-domain.vercel.app`.
+- [ ] Set **Authentication → URL Configuration → Site URL** to `https://rag-chat-swart.vercel.app`.
 - [ ] Add `http://localhost:3000/**` as an allowed development redirect.
-- [ ] Add `https://your-domain.vercel.app/**` as an allowed production redirect.
+- [ ] Add `https://rag-chat-swart.vercel.app/**` as an allowed production redirect.
 - [ ] Send a new magic link and confirm `/auth/confirm` returns to the protected workspace.
 
 ## 7. Production smoke test
@@ -110,7 +110,7 @@ After Vercel assigns the production domain:
 - [x] Add `docs/screenshots/workspace.png`.
 - [x] Add `docs/screenshots/grounded-answer.png`.
 - [x] Add `docs/screenshots/document-chat-demo.gif`.
-- [ ] Replace the README live-demo placeholder.
+- [x] Replace the README live-demo placeholder.
 - [ ] Add the live URL to the GitHub repository description.
 
 ## Rollback

@@ -2,8 +2,9 @@
 
 Context is a production-oriented Retrieval-Augmented Generation application for asking questions about private PDF documents. It extracts and embeds page-aware chunks, retrieves relevant evidence with pgvector, streams answers from Gemini, and links every supported claim to its source page.
 
-> **Live demo:** `https://your-project.vercel.app`
-> Replace this placeholder after the first production deployment.
+> **Live application:** [rag-chat-swart.vercel.app](https://rag-chat-swart.vercel.app)
+>
+> Upload a text-based PDF, ask a document-specific question, and inspect the page-level evidence behind the answer.
 
 ## Portfolio preview
 
@@ -15,6 +16,7 @@ Context is a production-oriented Retrieval-Augmented Generation application for 
 
 ## Highlights
 
+- Modern, responsive AI workspace with dark/light themes, accessible motion, and polished interaction states
 - Passwordless Supabase authentication with protected routes and cookie-based SSR sessions
 - Private PDF ingestion without writing uploads to the server filesystem
 - Page-aware chunking at approximately 600 tokens with 80-token overlap
@@ -78,6 +80,7 @@ flowchart LR
 | Layer | Technology |
 | --- | --- |
 | Web application | Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4 |
+| Interface | Responsive source-owned components, Lucide icons, CSS motion with reduced-motion support |
 | AI orchestration | Vercel AI SDK 7, Google Gemini provider |
 | Data | Supabase Postgres, pgvector, HNSW cosine index |
 | Files and identity | Supabase Storage and passwordless Auth |
@@ -184,16 +187,24 @@ The evaluator creates an isolated temporary Supabase user and document, saves `e
 
 ## Deployment
 
-Deploy through the connected GitHub repository on Vercel. The important production steps are:
+The application is deployed from the connected GitHub `main` branch at [rag-chat-swart.vercel.app](https://rag-chat-swart.vercel.app). For a new deployment or fork:
 
 1. Import `MirajHossain22/RAG-chat` into Vercel.
 2. Add every variable from `.env.example` to the Production environment.
 3. Enable Fluid Compute and select a Function Region close to the Supabase project region.
 4. Keep the route-level limits already defined in code: 120 seconds for chat and 300 seconds for ingestion.
-5. Deploy, then replace the Supabase Site URL with the production Vercel domain.
+5. Deploy, then set the Supabase Site URL and allowed redirect URL to the production Vercel domain.
 6. Verify authentication, upload, grounded answers, citations, refusal behavior, deletion, and rate limits.
 
 Use the detailed [Vercel deployment checklist](docs/DEPLOYMENT.md) before publishing the portfolio link.
+
+## Author
+
+Designed and built by **Miraj Hossain**.
+
+- GitHub: [@MirajHossain22](https://github.com/MirajHossain22)
+- Email: [mirajh417@gmail.com](mailto:mirajh417@gmail.com)
+- Live project: [rag-chat-swart.vercel.app](https://rag-chat-swart.vercel.app)
 
 ## Security and hardening
 
@@ -242,4 +253,4 @@ proxy.ts              Next.js 16 Supabase session refresh and route protection
 
 ## Status
 
-All eight implementation phases and the portfolio media are complete. The remaining portfolio tasks are to deploy to Vercel and replace the live-demo placeholder.
+**Production ready and deployed.** All eight implementation phases, the evaluation suite, responsive UI redesign, portfolio media, Supabase-backed data layer, Upstash rate limiting, and Vercel deployment are complete.
