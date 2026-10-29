@@ -107,9 +107,9 @@ After Vercel assigns the production domain:
 - [ ] Review Vercel Function logs for chat/ingestion errors and timeouts.
 - [ ] Review Supabase Auth logs, database logs, and Storage usage.
 - [ ] Review Upstash request volume and rate-limit activity.
-- [ ] Add `docs/screenshots/workspace.png`.
-- [ ] Add `docs/screenshots/grounded-answer.png`.
-- [ ] Add `docs/screenshots/document-chat-demo.gif`.
+- [x] Add `docs/screenshots/workspace.png`.
+- [x] Add `docs/screenshots/grounded-answer.png`.
+- [x] Add `docs/screenshots/document-chat-demo.gif`.
 - [ ] Replace the README live-demo placeholder.
 - [ ] Add the live URL to the GitHub repository description.
 

@@ -9,9 +9,9 @@ Context is a production-oriented Retrieval-Augmented Generation application for 
 
 | Workspace | Grounded answer and citations |
 | --- | --- |
-| _Screenshot placeholder: `docs/screenshots/workspace.png`_ | _Screenshot placeholder: `docs/screenshots/grounded-answer.png`_ |
+| ![Authenticated workspace with an ingested sample report](docs/screenshots/workspace.png) | ![Grounded answer with inline citations and page-aware source cards](docs/screenshots/grounded-answer.png) |
 
-_Demo GIF placeholder: `docs/screenshots/document-chat-demo.gif`_
+![Context demo: sign in, upload a PDF, ask a question, inspect citations, and delete the document](docs/screenshots/document-chat-demo.gif)
 
 ## Highlights
 
@@ -242,4 +242,4 @@ proxy.ts              Next.js 16 Supabase session refresh and route protection
 
 ## Status
 
-All eight implementation phases are complete. The remaining portfolio tasks are to add real screenshots/GIFs, deploy to Vercel, replace the live-demo placeholder, and publish the repository.
+All eight implementation phases and the portfolio media are complete. The remaining portfolio tasks are to deploy to Vercel and replace the live-demo placeholder.
