@@ -41,7 +41,7 @@ function CitationText({
             id={isFirstReference ? citationId(messageId, id) : undefined}
             href={`#${sourceId(messageId, id)}`}
             aria-label={`Open source ${id}`}
-            className="mx-0.5 inline-flex min-w-5 items-center justify-center rounded-md bg-[var(--accent-soft)] px-1.5 py-0.5 align-baseline text-[11px] font-semibold leading-4 text-[var(--accent)] no-underline transition hover:ring-1 hover:ring-[var(--accent)]"
+            className="mx-0.5 inline-flex min-w-6 items-center justify-center rounded-lg border border-[var(--accent)]/15 bg-[var(--accent-soft)] px-1.5 py-0.5 align-baseline text-[11px] font-semibold leading-4 text-[var(--accent)] no-underline transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-[0_5px_14px_var(--accent-glow)]"
           >
             [{id}]
           </a>
@@ -61,20 +61,25 @@ function SourceCards({
   if (sources.length === 0) return null;
 
   return (
-    <section className="mt-5" aria-label="Sources">
-      <p className="mb-2 text-[11px] font-semibold tracking-[0.12em] text-[var(--muted)] uppercase">
-        Sources
-      </p>
-      <div className="grid gap-2 sm:grid-cols-2">
+    <section className="mt-6 border-t border-[var(--line)] pt-5" aria-label="Sources">
+      <div className="mb-3 flex items-center justify-between">
+        <p className="text-[10px] font-semibold tracking-[0.16em] text-[var(--muted)] uppercase">
+          Retrieved evidence
+        </p>
+        <span className="rounded-full border border-[var(--line)] bg-[var(--panel-muted)] px-2 py-0.5 text-[10px] text-[var(--muted)]">
+          {sources.length} {sources.length === 1 ? "source" : "sources"}
+        </span>
+      </div>
+      <div className="grid gap-2.5 sm:grid-cols-2">
         {sources.map((source) => (
           <a
             key={source.id}
             id={sourceId(messageId, source.id)}
             href={`#${citationId(messageId, source.id)}`}
-            className="group scroll-mt-24 rounded-xl border border-[var(--line)] bg-[var(--panel)] p-3 no-underline transition hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-sm target:border-[var(--accent)] target:ring-2 target:ring-[var(--accent-soft)]"
+            className="surface-shine group scroll-mt-24 rounded-2xl border border-[var(--line)] bg-[var(--panel-muted)] p-3.5 no-underline transition hover:-translate-y-0.5 hover:border-[var(--line-strong)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)] target:border-[var(--accent)] target:ring-4 target:ring-[var(--accent-soft)]"
           >
             <span className="flex items-start gap-2.5">
-              <span className="mt-0.5 grid size-8 shrink-0 place-items-center rounded-lg bg-[var(--accent-soft)] text-[var(--accent)]">
+              <span className="mt-0.5 grid size-9 shrink-0 place-items-center rounded-xl border border-[var(--accent)]/10 bg-[var(--accent-soft)] text-[var(--accent)]">
                 <FileText className="size-3.5" />
               </span>
               <span className="min-w-0 flex-1">
@@ -82,14 +87,14 @@ function SourceCards({
                   <span className="truncate text-xs font-semibold" title={source.fileName}>
                     {source.fileName}
                   </span>
-                  <ArrowUpRight className="size-3 shrink-0 text-[var(--muted)] transition group-hover:text-[var(--accent)]" />
+                  <ArrowUpRight className="size-3.5 shrink-0 text-[var(--muted)] transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[var(--accent)]" />
                 </span>
-                <span className="mt-0.5 block text-[10px] text-[var(--accent)]">
+                <span className="mt-1 block text-[10px] font-medium text-[var(--accent)]">
                   Page {source.pageNumber} · [{source.id}]
                 </span>
               </span>
             </span>
-            <span className="mt-2 line-clamp-3 block text-xs leading-5 text-[var(--muted)]">
+            <span className="mt-3 line-clamp-3 block text-xs leading-5 text-[var(--muted)]">
               {source.snippet}
             </span>
           </a>
@@ -105,7 +110,7 @@ export function ChatMessage({ message }: { message: AppUIMessage }) {
 
   if (message.role === "user") {
     return (
-      <article className="ml-auto max-w-[85%] rounded-2xl rounded-br-md bg-[var(--foreground)] px-4 py-3 text-sm leading-6 text-[var(--background)]">
+      <article className="animate-enter ml-auto max-w-[88%] rounded-[20px] rounded-br-md bg-[var(--foreground)] px-4 py-3 text-sm leading-6 text-[var(--background)] shadow-[0_12px_30px_rgba(0,0,0,0.12)] sm:max-w-[78%]">
         {message.parts.map((part, index) =>
           part.type === "text" ? (
             <p className="whitespace-pre-wrap" key={index}>
@@ -118,21 +123,28 @@ export function ChatMessage({ message }: { message: AppUIMessage }) {
   }
 
   return (
-    <article className="max-w-[96%] text-sm leading-7">
-      <div className="mb-2 flex items-center gap-2 text-xs font-semibold text-[var(--accent)]">
-        <Sparkles className="size-3.5" />
-        Context
+    <article className="animate-enter max-w-full rounded-[24px] border border-[var(--line)] bg-[var(--panel)] p-4 text-sm leading-7 shadow-sm backdrop-blur sm:p-5">
+      <div className="mb-4 flex items-center gap-3">
+        <span className="grid size-8 place-items-center rounded-xl bg-[var(--accent-soft)] text-[var(--accent)]">
+          <Sparkles className="size-3.5" />
+        </span>
+        <div>
+          <p className="text-xs font-semibold tracking-[-0.01em]">Context</p>
+          <p className="text-[10px] text-[var(--muted)]">Grounded in selected documents</p>
+        </div>
       </div>
-      {message.parts.map((part, index) =>
-        part.type === "text" ? (
-          <CitationText
-            key={index}
-            messageId={message.id}
-            sources={sources}
-            text={part.text}
-          />
-        ) : null,
-      )}
+      <div className="text-[var(--muted-strong)]">
+        {message.parts.map((part, index) =>
+          part.type === "text" ? (
+            <CitationText
+              key={index}
+              messageId={message.id}
+              sources={sources}
+              text={part.text}
+            />
+          ) : null,
+        )}
+      </div>
       <SourceCards messageId={message.id} sources={sources} />
     </article>
   );

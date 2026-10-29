@@ -12,14 +12,19 @@ export function ErrorToast({
   if (!message) return null;
 
   return (
-    <div className="fixed top-4 right-4 z-50 flex w-[min(92vw,380px)] items-start gap-3 rounded-2xl border border-red-500/25 bg-[var(--panel)] p-4 text-sm shadow-xl" role="alert">
-      <AlertCircle className="mt-0.5 size-4 shrink-0 text-red-600 dark:text-red-400" />
-      <p className="min-w-0 flex-1 leading-5">{message}</p>
+    <div className="animate-enter app-shell fixed top-4 right-4 z-50 flex w-[min(92vw,400px)] items-start gap-3 rounded-2xl border-red-500/25 p-4 text-sm shadow-2xl" role="alert">
+      <span className="grid size-8 shrink-0 place-items-center rounded-xl bg-red-500/10 text-[var(--danger)]">
+        <AlertCircle className="size-4" />
+      </span>
+      <div className="min-w-0 flex-1">
+        <p className="text-xs font-semibold">Something needs attention</p>
+        <p className="mt-1 leading-5 text-[var(--muted-strong)]">{message}</p>
+      </div>
       <button
         type="button"
         onClick={onDismiss}
         aria-label="Dismiss error"
-        className="grid size-6 shrink-0 place-items-center rounded-md text-[var(--muted)] transition hover:bg-red-500/10 hover:text-red-600"
+        className="grid size-7 shrink-0 place-items-center rounded-lg text-[var(--muted)] transition hover:bg-red-500/10 hover:text-[var(--danger)]"
       >
         <X className="size-3.5" />
       </button>
