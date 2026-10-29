@@ -1,0 +1,162 @@
+[
+  {
+    "id": "q01",
+    "question": "How long did the Riverbend Community Solar Pilot run?",
+    "answer": "It ran for 18 months, from January 2024 through June 2025.",
+    "answerable": true,
+    "expectedPage": 1,
+    "keywords": ["18 months", "January 2024", "June 2025"]
+  },
+  {
+    "id": "q02",
+    "question": "How many households participated and which neighborhoods did the pilot serve?",
+    "answer": "It served 240 households in Northbank and East Junction.",
+    "answerable": true,
+    "expectedPage": 1,
+    "keywords": ["240", "Northbank", "East Junction"]
+  },
+  {
+    "id": "q03",
+    "question": "What total solar capacity was installed?",
+    "answer": "The pilot installed 1.2 megawatts across three municipal sites.",
+    "answerable": true,
+    "expectedPage": 1,
+    "keywords": ["1.2", "megawatts", "three"]
+  },
+  {
+    "id": "q04",
+    "question": "Which site had the largest installation and what was its capacity?",
+    "answer": "The Riverbend Water Treatment Plant had the largest installation at 0.5 MW.",
+    "answerable": true,
+    "expectedPage": 2,
+    "keywords": ["Water Treatment Plant", "0.5 MW"]
+  },
+  {
+    "id": "q05",
+    "question": "Did households have to pay an enrollment fee?",
+    "answer": "No household paid an enrollment fee.",
+    "answerable": true,
+    "expectedPage": 2,
+    "keywords": ["no", "enrollment fee"]
+  },
+  {
+    "id": "q06",
+    "question": "Which languages were available through the support team?",
+    "answer": "Support was available in English, Spanish, and Bengali.",
+    "answerable": true,
+    "expectedPage": 2,
+    "keywords": ["English", "Spanish", "Bengali"]
+  },
+  {
+    "id": "q07",
+    "question": "How much electricity did the installations generate during the pilot?",
+    "answer": "They generated 1.84 gigawatt-hours.",
+    "answerable": true,
+    "expectedPage": 3,
+    "keywords": ["1.84", "gigawatt-hours"]
+  },
+  {
+    "id": "q08",
+    "question": "What were the average system uptime and household bill reduction?",
+    "answer": "Average uptime was 96.4 percent and bills fell by an average of 23 percent.",
+    "answerable": true,
+    "expectedPage": 3,
+    "keywords": ["96.4", "23 percent"]
+  },
+  {
+    "id": "q09",
+    "question": "What was the estimated avoided carbon impact?",
+    "answer": "The project avoided an estimated 1,120 metric tons of carbon dioxide equivalent.",
+    "answerable": true,
+    "expectedPage": 3,
+    "keywords": ["1,120", "metric tons", "carbon dioxide"]
+  },
+  {
+    "id": "q10",
+    "question": "What percentage of survey respondents rated the program good or excellent?",
+    "answer": "82 percent rated it good or excellent.",
+    "answerable": true,
+    "expectedPage": 4,
+    "keywords": ["82 percent", "good or excellent"]
+  },
+  {
+    "id": "q11",
+    "question": "What was the most common participant complaint?",
+    "answer": "Monthly bill-credit calculations were difficult to understand.",
+    "answerable": true,
+    "expectedPage": 4,
+    "keywords": ["credit", "difficult to understand"]
+  },
+  {
+    "id": "q12",
+    "question": "How many residents completed solar training and how many found energy-sector jobs?",
+    "answer": "31 residents completed training and 19 found energy-sector employment within three months.",
+    "answerable": true,
+    "expectedPage": 4,
+    "keywords": ["31", "19", "three months"]
+  },
+  {
+    "id": "q13",
+    "question": "What was the total project cost and how much did the state grant cover?",
+    "answer": "The project cost 2.4 million dollars and the state grant covered 55 percent.",
+    "answerable": true,
+    "expectedPage": 5,
+    "keywords": ["2.4 million", "55 percent"]
+  },
+  {
+    "id": "q14",
+    "question": "What annual savings and payback period were projected?",
+    "answer": "Annual value was projected at 184,000 dollars with a 12-year simple payback.",
+    "answerable": true,
+    "expectedPage": 5,
+    "keywords": ["184,000", "12 years"]
+  },
+  {
+    "id": "q15",
+    "question": "What caused the seven-week construction delay?",
+    "answer": "Interconnection approval delayed construction by seven weeks.",
+    "answerable": true,
+    "expectedPage": 5,
+    "keywords": ["interconnection approval", "seven weeks"]
+  },
+  {
+    "id": "q16",
+    "question": "What expansion and battery actions did the report recommend?",
+    "answer": "It recommended expanding to 2.5 MW and adding battery storage at the transit depot after a fire-safety review.",
+    "answerable": true,
+    "expectedPage": 6,
+    "keywords": ["2.5 MW", "battery storage", "transit depot", "fire-safety"]
+  },
+  {
+    "id": "q17",
+    "question": "Who was the chief executive officer of the solar equipment manufacturer?",
+    "answer": "The document does not identify a solar equipment manufacturer or its CEO.",
+    "answerable": false,
+    "expectedPage": null,
+    "keywords": []
+  },
+  {
+    "id": "q18",
+    "question": "How many wind turbines were installed by the project?",
+    "answer": "The document does not discuss wind turbines.",
+    "answerable": false,
+    "expectedPage": null,
+    "keywords": []
+  },
+  {
+    "id": "q19",
+    "question": "How much revenue came from selling carbon credits?",
+    "answer": "The document does not report carbon-credit sales revenue.",
+    "answerable": false,
+    "expectedPage": null,
+    "keywords": []
+  },
+  {
+    "id": "q20",
+    "question": "What was the battery supplier's warranty length?",
+    "answer": "The document does not name a battery supplier or warranty.",
+    "answerable": false,
+    "expectedPage": null,
+    "keywords": []
+  }
+]
